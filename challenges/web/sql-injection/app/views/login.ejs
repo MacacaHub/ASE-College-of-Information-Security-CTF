@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | MacacaHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <section class="flex min-h-screen flex-col items-center bg-gray-100">
+    <div class="mt-24 w-1/3 bg-white px-8 py-6 text-left shadow-lg">
+      <div class="flex justify-center">
+        <img src="https://avatars.githubusercontent.com/u/59274391?s=150&v=4" />
+      </div>
+      <h3 class="text-center text-2xl font-bold">Welcome</h3>
+      <form method="POST" action="/login" id="form">
+        <div class="mt-4">
+          <div>
+            <label class="block" for="username">Username</label>
+            <input type="text" name="username" placeholder="Username" class="mt-2 w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-600" />
+          </div>
+          <div class="mt-4">
+            <label class="block">Password</label>
+            <input type="password" name="password" placeholder="Password" class="mt-2 w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-600" />
+          </div>
+          <% if (failed) {%>
+          <article class="mt-2">
+            <div class="text-red-700">Login failed QQ</div>
+          </article>
+          <% } %>
+          <div class="mt-4">
+            <button class="mt-2 w-full rounded-lg border bg-blue-600 px-4 py-2 text-white hover:bg-blue-900">Login</button>
+          </div>
+        </div>
+      </form>
+      <hr class="mt-2" />
+      <a id="magic" class="block w-full text-center">Magic</a>
+    </div>
+    <article class="mt-2 hidden w-1/3 px-2 py-2 text-lg" id="hint">
+      <div>SELECT * FROM users WHERE username='<span class="text-red-700" id="username"></span>' AND password='<span class="text-red-700" id="password"></span>'</div>
+    </article>
+  </section>  
+  <script>
+    magic.onclick = () => hint.classList.toggle("hidden");
+    window.onload = form.oninput = () =>
+      ([username.textContent, password.textContent] = [
+        form.username.value,
+        btoa(form.password.value),
+      ]);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  ctfcli:
+    build: .
+    image: ctfcli:0.0.10-alpine
+    container_name: ctfcli
+    volumes:
+      - ./.ctf:/ctf/.ctf:ro
+      - ../challenges:/ctf/challenges:ro
+
+networks:
+  default:
+    name: $DEFAULT_NETWORK
+    external: true

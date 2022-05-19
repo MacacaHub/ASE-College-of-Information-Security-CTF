@@ -1,0 +1,38 @@
+version: "3.9" 
+
+services:
+  web:
+    build: .
+    restart: always
+    env_file:
+      - .env.db
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sqli.rule=Host(`sqli.$DOMAIN`)"
+      - "traefik.http.routers.sqli.entrypoints=websecure"
+      - "traefik.http.routers.sqli.tls.certresolver=lets-encrypt"
+      - "traefik.docker.network=$DEFAULT_NETWORK"
+    depends_on:
+      - db
+    networks:
+      - default
+      - internal
+    
+  db:  
+    image: mariadb:10.7-focal
+    restart: always
+    env_file:
+      - .env.db
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - internal
+    
+
+networks:
+  default:
+    name: $DEFAULT_NETWORK
+    external: true
+  internal:
+    internal: true
+    

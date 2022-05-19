@@ -1,0 +1,19 @@
+# Required sections
+name: "SQL Injection Adv."
+author: "stavhaygn"
+category: Web
+description: "find other tables?"
+value: 300
+type: standard
+
+# Optional settings
+
+connection_info: https://sqli.macacahub.tw
+
+flags:
+  - FLAG{sql_1nject10n_by_un10n_select}
+
+requirements: 
+  - "SQL Injection"
+
+state: visible

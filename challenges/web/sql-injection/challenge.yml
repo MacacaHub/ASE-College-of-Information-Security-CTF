@@ -1,0 +1,22 @@
+# Required sections
+name: "SQL Injection"
+author: "stavhaygn"
+category: Web
+description: "1=1 ?"
+value: 100
+type: standard
+
+# Optional settings
+
+connection_info: https://sqli.macacahub.tw
+
+flags:
+  - FLAG{t0_be_c0ntinued?}
+
+tags:
+  - warm-up
+
+files:
+  - ./app/server.js
+
+state: visible
