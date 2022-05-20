@@ -1,0 +1,15 @@
+service password
+{
+        disable = no
+        type = UNLISTED
+        wait = no
+        server = /home/password/run.sh
+        socket_type = stream
+        protocol = tcp
+        user = password
+        port = 9999
+        flags = REUSE
+        per_source = 5
+        rlimit_cpu = 3
+        nice = 18
+}

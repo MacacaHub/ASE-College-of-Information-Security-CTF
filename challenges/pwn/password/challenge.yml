@@ -1,0 +1,20 @@
+# Required sections
+name: "password"
+author: "stavhaygn"
+category: Pwn
+description: "Can you change the password?<br /> The flag in `/home/password/`."
+value: 150
+type: standard
+
+# Optional settings
+
+connection_info: "nc pwn.macacahub.tw 3000"
+
+flags:
+  - FLAG{p4ssw0rd_0verfl0w}
+
+files:
+  - ./src/password.c
+  - ./service/public/password
+
+state: visible

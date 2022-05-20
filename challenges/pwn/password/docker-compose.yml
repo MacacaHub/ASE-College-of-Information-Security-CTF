@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  password:
+    build: .
+    volumes:
+      - ./service/public:/home/password:ro
+      - ./service/xinetd:/etc/xinetd.d/password:ro
+    ports:
+      - "3000:9999"
