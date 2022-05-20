@@ -1,0 +1,9 @@
+.env
+traefik.yml
+secrets
+letsencrypt/acme.json
+
+ctfd/.data/*
+ctfd/.env.db
+
+ctfcli/.ctf/*
