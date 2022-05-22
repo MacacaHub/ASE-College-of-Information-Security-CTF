@@ -1,0 +1,17 @@
+# Required sections
+name: "Devil May Cry"
+author: "stavhaygn"
+category: Misc
+description: "I wanna play Devil May Cry. <br/> (́◉◞౪◟◉‵) <br/>password for zip is `DmCCmD`"
+value: 500
+type: standard
+
+# Optional settings
+
+flags:
+  - FLAG{H4ck3r_l0v3_P0w3rSh3ll}
+
+files:
+  - ./src/DmC.zip
+
+state: hidden

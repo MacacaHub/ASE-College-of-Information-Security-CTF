@@ -1,0 +1,1 @@
+"FLAG{H4ck3r_l0v3_P0w3rSh3ll}" | Out-File -Encoding utf8 -FilePath "C:\Users\Public\Documents\flag"
