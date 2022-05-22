@@ -1,0 +1,21 @@
+# Required sections
+name: "RSA"
+author: "stavhaygn"
+category: Crypto
+description: "n, e, p, q, d"
+value: 300
+type: standard
+
+# Optional settings
+
+flags:
+  - FLAG{W1k1ped1a_1s_y0ur_Fr1enD!}
+
+files:
+  - ./src/key.pub
+  - ./src/flag.enc
+
+hints:
+  - "Wikipedia is your friend. https://zh.wikipedia.org/zh-tw/RSA%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95#%E5%B7%B2%E5%85%AC%E9%96%8B%E7%9A%84%E6%88%96%E5%B7%B2%E7%9F%A5%E7%9A%84%E6%94%BB%E6%93%8A%E6%96%B9%E6%B3%95="
+
+state: hidden
