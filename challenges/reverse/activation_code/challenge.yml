@@ -1,0 +1,23 @@
+# Required sections
+name: "Activation Code"
+author: "stavhaygn"
+category: Reverse
+description: "I don't know the activation code. QQ"
+value: 350
+type: standard
+
+# Optional settings
+
+flags:
+  - FLAG{w0W_Byp4ss_ver1f1c4t1on_By_n0p_N0p}
+
+files:
+  - ./src/_hackMe.go
+  - ./src/hackMe
+  - ./src/hackMe.exe
+  - ./src/hackMe.dump
+
+hints:
+  - "Online binary editor https://hexed.it/"
+
+state: hidden
