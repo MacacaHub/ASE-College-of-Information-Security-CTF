@@ -1,0 +1,23 @@
+# Required sections
+name: "salt"
+author: "stavhaygn"
+category: Web
+description: "Welcome to MacacaHub!"
+value: 200
+type: standard
+
+# Optional settings
+
+connection_info: https://salt.macacahub.tw
+
+flags:
+  - FLAG{Cycl0p1s_1s_a_m0nkey}
+
+files:
+  - ./app/app.go
+
+hints:
+  - "Can you find the special file? https://salt.macacahub.tw/files/upload/"
+  - "Weak passwords? https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-500.txt"
+
+state: hidden

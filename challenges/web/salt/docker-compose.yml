@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    image: web/salt:0.1
+    restart: always
+    volumes:
+      - ./app/files:/app/files:ro
+      - ./app/templates:/app/templates:ro
+    env_file:
+      - ./flag
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.salt.rule=Host(`salt.$DOMAIN`)"
+      - "traefik.http.routers.salt.entrypoints=websecure"
+      - "traefik.http.routers.salt.tls.certresolver=lets-encrypt"
+
+networks:
+  default:
+    name: $DEFAULT_NETWORK
+    external: true

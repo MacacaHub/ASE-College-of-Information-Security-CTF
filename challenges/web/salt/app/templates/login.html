@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | MacacaHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <section class="flex min-h-screen items-center justify-center bg-sky-900">
+      <div class="w-96 rounded-lg bg-white px-8 py-6 text-left shadow-lg">
+        <div class="flex justify-center">
+          <img class="w-48" src="/files/upload/logo.png" />
+        </div>
+        <h3 class="text-center text-2xl font-bold">Welcome</h3>
+        <form method="POST" action="/login" id="form">
+          <div class="mt-4">
+            <div>
+              <label class="block" for="name">Name</label>
+              <input type="text" name="name" placeholder="name" class="mt-2 w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-1 focus:ring-sky-700" />
+            </div>
+            <div class="mt-4">
+              <label class="block">Password</label>
+              <input type="password" name="password" placeholder="Password" class="mt-2 w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-1 focus:ring-sky-700" />
+            </div>
+            {{if .Failed}}
+            <article class="mt-2">
+              <div class="text-red-700">Login failed QQ</div>
+            </article>
+            {{end}}
+            <div class="mt-4">
+              <button class="mt-2 w-full rounded-lg border bg-orange-600 px-4 py-2 text-slate-900 hover:bg-orange-700">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
