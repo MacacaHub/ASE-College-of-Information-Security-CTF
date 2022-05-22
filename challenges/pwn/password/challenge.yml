@@ -1,5 +1,5 @@
 # Required sections
-name: "password"
+name: "Password"
 author: "stavhaygn"
 category: Pwn
 description: "Can you change the password?<br /> The flag is in `/home/password/`."
