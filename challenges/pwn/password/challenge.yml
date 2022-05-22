@@ -2,7 +2,7 @@
 name: "password"
 author: "stavhaygn"
 category: Pwn
-description: "Can you change the password?<br /> The flag in `/home/password/`."
+description: "Can you change the password?<br /> The flag is in `/home/password/`."
 value: 150
 type: standard
 
